@@ -61,3 +61,9 @@ Route::group(['middleware' => ['role:super-admin|admin']], function() {
     Route::get('users/{userId}/delete', [UserController::class, 'destroy']);
 
 });
+
+Route::group(['middleware' => ['auth']], function() {
+
+    Route::resource('roles', RoleController::class);
+
+});
