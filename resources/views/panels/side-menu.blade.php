@@ -2,7 +2,7 @@
 
 
     <div class="app-brand demo ">
-                      <img src="/assets/img/logo/logo.png" alt="" style="height: 41px">
+        <img src="/assets/img/logo/logo.png" alt="" style="height: 41px">
 
         {{-- <a href="index-2.html" class="app-brand-link">
             <span class="app-brand-logo demo">
@@ -14,7 +14,7 @@
   </svg>
                 <img src="/assets/img/logo/logo.png" alt="">
             </span>
-            <span class="app-brand-text demo menu-text fw-bold">Admin </span>
+            <span class="app-brand-text demo menu-text fw-bold">Admin</span>
         </a> --}}
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -36,31 +36,32 @@
                 <div class="badge bg-danger rounded-pill ms-auto">5</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item active">
+
+                <!-- <li class="menu-item active">
                     <a href="index-2.html" class="menu-link">
                         <div data-i18n="Analytics">Analytics</div>
                     </a>
-                </li>
-                <li class="menu-item">
+                </li> -->
+                <!-- <li class="menu-item">
                     <a href="dashboards-crm.html" class="menu-link">
                         <div data-i18n="CRM">CRM</div>
                     </a>
-                </li>
-                <li class="menu-item">
+                </li> -->
+                <!-- <li class="menu-item">
                     <a href="app-ecommerce-dashboard.html" class="menu-link">
                         <div data-i18n="eCommerce">eCommerce</div>
                     </a>
-                </li>
-                <li class="menu-item">
+                </li> -->
+                <!-- <li class="menu-item">
                     <a href="app-logistics-dashboard.html" class="menu-link">
                         <div data-i18n="Logistics">Logistics</div>
                     </a>
-                </li>
-                <li class="menu-item">
+                </li> -->
+                <!-- <li class="menu-item">
                     <a href="app-academy-dashboard.html" class="menu-link">
                         <div data-i18n="Academy">Academy</div>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </li>
 
@@ -68,38 +69,38 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-layout-sidebar"></i>
-                <div data-i18n="Layouts">Layouts</div>
+                <div data-i18n="Academics">Academics</div>
             </a>
 
             <ul class="menu-sub">
 
                 <li class="menu-item">
                     <a href="layouts-collapsed-menu.html" class="menu-link">
-                        <div data-i18n="Collapsed menu">Collapsed menu</div>
+                        <div data-i18n="Boards">Boards</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="layouts-content-navbar.html" class="menu-link">
-                        <div data-i18n="Content navbar">Content navbar</div>
+                        <div data-i18n="Departments">Departments</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="layouts-content-navbar-with-sidebar.html" class="menu-link">
-                        <div data-i18n="Content nav + Sidebar">Content nav + Sidebar</div>
+                        <div data-i18n="Programs">Programs</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/horizontal-menu-template"
                         class="menu-link" target="_blank">
-                        <div data-i18n="Horizontal">Horizontal</div>
+                        <div data-i18n="Subjects">Subjects</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="layouts-without-menu.html" class="menu-link">
-                        <div data-i18n="Without menu">Without menu</div>
+                        <div data-i18n="Syllabus">Syllabus</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                     <a href="layouts-without-navbar.html" class="menu-link">
                         <div data-i18n="Without navbar">Without navbar</div>
                     </a>
@@ -118,7 +119,7 @@
                     <a href="layouts-blank.html" class="menu-link">
                         <div data-i18n="Blank">Blank</div>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </li>
 
@@ -126,37 +127,43 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons ti ti-files'></i>
-                <div data-i18n="Front Pages">Front Pages</div>
+                <div data-i18n="Admissions">Admissions</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/landing-page.html"
                         class="menu-link" target="_blank">
-                        <div data-i18n="Landing">Landing</div>
+                        <div data-i18n="Applications">Applications</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/pricing-page.html"
                         class="menu-link" target="_blank">
-                        <div data-i18n="Pricing">Pricing</div>
+                        <div data-i18n="Apply Fresh">Apply Fresh</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/payment-page.html"
                         class="menu-link" target="_blank">
-                        <div data-i18n="Payment">Payment</div>
+                        <div data-i18n="Re-Registrations">Re-Registrations</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/checkout-page.html"
                         class="menu-link" target="_blank">
-                        <div data-i18n="Checkout">Checkout</div>
+                        <div data-i18n="Back Paper">Back Paper</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/help-center-landing.html"
                         class="menu-link" target="_blank">
-                        <div data-i18n="Help Center">Help Center</div>
+                        <div data-i18n="Results">Results</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/help-center-landing.html"
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Exam Schedule">Exam Schedule</div>
                     </a>
                 </li>
             </ul>
@@ -164,22 +171,22 @@
 
 
         <!-- Apps & Pages -->
-        <li class="menu-header small">
+        <!-- <li class="menu-header small">
             <span class="menu-header-text" data-i18n="Apps & Pages">Apps &amp; Pages</span>
-        </li>
+        </li> -->
         <li class="menu-item">
             <a href="app-email.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-mail"></i>
-                <div data-i18n="Email">Email</div>
+                <div data-i18n="Settings">Settings</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="app-chat.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-messages"></i>
-                <div data-i18n="Chat">Chat</div>
+                <div data-i18n="Notifications">Notifications</div>
             </a>
         </li>
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="app-calendar.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-calendar"></i>
                 <div data-i18n="Calendar">Calendar</div>
@@ -190,9 +197,9 @@
                 <i class="menu-icon tf-icons ti ti-layout-kanban"></i>
                 <div data-i18n="Kanban">Kanban</div>
             </a>
-        </li>
+        </li> -->
         <!-- e-commerce-app menu start -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons ti ti-shopping-cart'></i>
                 <div data-i18n="eCommerce">eCommerce</div>
@@ -330,28 +337,38 @@
                     </ul>
                 </li>
             </ul>
-        </li>
+        </li> -->
         <!-- e-commerce-app menu end -->
         <!-- Academy menu start -->
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons ti ti-book'></i>
-                <div data-i18n="Academy">Academy</div>
+                <div data-i18n="Accounts">Accounts</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="app-academy-dashboard.html" class="menu-link">
-                        <div data-i18n="Dashboard">Dashboard</div>
+                        <div data-i18n="Center Ledgers">Center Ledgers</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="app-academy-course.html" class="menu-link">
-                        <div data-i18n="My Course">My Course</div>
+                        <div data-i18n="Offline Payments">Offline Payments</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="app-academy-course-details.html" class="menu-link">
-                        <div data-i18n="Course Details">Course Details</div>
+                        <div data-i18n="Online Payments">Online Payments </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-academy-course-details.html" class="menu-link">
+                        <div data-i18n="Students Ledgers">Students Ledgers</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-academy-course-details.html" class="menu-link">
+                        <div data-i18n="Wallet Payments">Wallet Payments</div>
                     </a>
                 </li>
             </ul>
@@ -360,17 +377,47 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons ti ti-truck'></i>
-                <div data-i18n="Logistics">Logistics</div>
+                <div data-i18n="Users">Users</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="app-logistics-dashboard.html" class="menu-link">
-                        <div data-i18n="Dashboard">Dashboard</div>
+                        <div data-i18n="Board Managers">Board Managers</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="app-logistics-fleet.html" class="menu-link">
-                        <div data-i18n="Fleet">Fleet</div>
+                        <div data-i18n="Operations">Operations</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-logistics-fleet.html" class="menu-link">
+                        <div data-i18n="Counsellor">Counsellor</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-logistics-fleet.html" class="menu-link">
+                        <div data-i18n="Sub-Counsellor">Sub-Counsellor</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-logistics-fleet.html" class="menu-link">
+                        <div data-i18n="Center Masters">Center Masters</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-logistics-fleet.html" class="menu-link">
+                        <div data-i18n="Centers">Centers</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-logistics-fleet.html" class="menu-link">
+                        <div data-i18n="Sub-Centers">Sub-Centers</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-logistics-fleet.html" class="menu-link">
+                        <div data-i18n="Accountants">Accountants</div>
                     </a>
                 </li>
             </ul>
@@ -378,32 +425,92 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons ti ti-file-dollar'></i>
-                <div data-i18n="Invoice">Invoice</div>
+                <div data-i18n="LMS-Settings">LMS-Settings</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="app-invoice-list.html" class="menu-link">
-                        <div data-i18n="List">List</div>
+                        <div data-i18n="Subjects">Subjects</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="app-invoice-preview.html" class="menu-link">
-                        <div data-i18n="Preview">Preview</div>
+                        <div data-i18n="Date Sheets">Date Sheets</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="app-invoice-edit.html" class="menu-link">
-                        <div data-i18n="Edit">Edit</div>
+                        <div data-i18n="Assignments">Assignments</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="app-invoice-add.html" class="menu-link">
-                        <div data-i18n="Add">Add</div>
+                        <div data-i18n="Assignments Review">Assignments Review</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Practicals">Practicals</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Mock Test">Mock Test</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Exam">Exam</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Results">Results</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Queries & Feedback">Queries & Feedback</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="E-Books">E-Books</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Videos">Videos</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Question Banks">Question Banks</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Dispatch">Dispatch</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Documents">Documents</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Contact Us">Contact Us</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-invoice-add.html" class="menu-link">
+                        <div data-i18n="Download Center">Download Center</div>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-users"></i>
                 <div data-i18n="Users">Users</div>
@@ -448,8 +555,8 @@
                     </ul>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons ti ti-settings'></i>
                 <div data-i18n="Roles & Permissions">Roles & Permissions</div>
@@ -466,8 +573,8 @@
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-file"></i>
                 <div data-i18n="Pages">Pages</div>
@@ -570,8 +677,8 @@
                     </ul>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-lock"></i>
                 <div data-i18n="Authentications">Authentications</div>
@@ -685,8 +792,8 @@
                     </ul>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-forms"></i>
                 <div data-i18n="Wizard Examples">Wizard Examples</div>
@@ -708,20 +815,20 @@
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="modal-examples.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-square"></i>
                 <div data-i18n="Modal Examples">Modal Examples</div>
             </a>
-        </li>
+        </li> -->
 
         <!-- Components -->
-        <li class="menu-header small">
+        <!-- <li class="menu-header small">
             <span class="menu-header-text" data-i18n="Components">Components</span>
-        </li>
+        </li> -->
         <!-- Cards -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-id"></i>
                 <div data-i18n="Cards">Cards</div>
@@ -754,9 +861,9 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
         <!-- User interface -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-color-swatch"></i>
                 <div data-i18n="User interface">User interface</div>
@@ -858,10 +965,10 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
 
         <!-- Extended components -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-components"></i>
                 <div data-i18n="Extended UI">Extended UI</div>
@@ -940,10 +1047,10 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
 
         <!-- Icons -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-brand-tabler"></i>
                 <div data-i18n="Icons">Icons</div>
@@ -960,14 +1067,14 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
 
         <!-- Forms & Tables -->
-        <li class="menu-header small">
+        <!-- <li class="menu-header small">
             <span class="menu-header-text" data-i18n="Forms & Tables">Forms &amp; Tables</span>
-        </li>
+        </li> -->
         <!-- Forms -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-toggle-left"></i>
                 <div data-i18n="Form Elements">Form Elements</div>
@@ -1024,8 +1131,8 @@
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-layout-navbar"></i>
                 <div data-i18n="Form Layouts">Form Layouts</div>
@@ -1047,8 +1154,8 @@
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-text-wrap-disabled"></i>
                 <div data-i18n="Form Wizard">Form Wizard</div>
@@ -1065,21 +1172,21 @@
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="form-validation.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-checkbox"></i>
                 <div data-i18n="Form Validation">Form Validation</div>
             </a>
-        </li>
+        </li> -->
         <!-- Tables -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="tables-basic.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-table"></i>
                 <div data-i18n="Tables">Tables</div>
             </a>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-layout-grid"></i>
                 <div data-i18n="Datatables">Datatables</div>
@@ -1101,13 +1208,13 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
 
         <!-- Charts & Maps -->
-        <li class="menu-header small">
+        <!-- <li class="menu-header small">
             <span class="menu-header-text" data-i18n="Charts & Maps">Charts &amp; Maps</span>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-chart-pie"></i>
                 <div data-i18n="Charts">Charts</div>
@@ -1124,31 +1231,31 @@
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="maps-leaflet.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-map"></i>
                 <div data-i18n="Leaflet Maps">Leaflet Maps</div>
             </a>
-        </li>
+        </li> -->
 
         <!-- Misc -->
-        <li class="menu-header small">
+        <!-- <li class="menu-header small">
             <span class="menu-header-text" data-i18n="Misc">Misc</span>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="https://pixinvent.ticksy.com/" target="_blank" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-lifebuoy"></i>
                 <div data-i18n="Support">Support</div>
             </a>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
             <a href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/" target="_blank"
                 class="menu-link">
                 <i class="menu-icon tf-icons ti ti-file-description"></i>
                 <div data-i18n="Documentation">Documentation</div>
             </a>
-        </li>
+        </li> -->
     </ul>
 
 
