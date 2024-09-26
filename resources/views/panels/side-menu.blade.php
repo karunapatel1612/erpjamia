@@ -1,9 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-
-
     <div class="app-brand demo ">
         <img src="/assets/img/logo/logo.png" alt="" style="height: 41px">
-
         {{-- <a href="index-2.html" class="app-brand-link">
             <span class="app-brand-logo demo">
                 <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,28 +72,28 @@
             <ul class="menu-sub">
 
                 <li class="menu-item">
-                    <a href="layouts-collapsed-menu.html" class="menu-link">
+                    <a href="{{route('academics.boards')}}" class="menu-link">
                         <div data-i18n="Boards">Boards</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-content-navbar.html" class="menu-link">
+                    <a href="Academics/Departments" class="menu-link">
                         <div data-i18n="Departments">Departments</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-content-navbar-with-sidebar.html" class="menu-link">
+                    <a href="Academics/Programs" class="menu-link">
                         <div data-i18n="Programs">Programs</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/horizontal-menu-template"
+                    <a href="Academics/Subjects"
                         class="menu-link" target="_blank">
                         <div data-i18n="Subjects">Subjects</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
+                    <a href="Academics/Syllabus" class="menu-link">
                         <div data-i18n="Syllabus">Syllabus</div>
                     </a>
                 </li>
@@ -131,37 +128,37 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/landing-page.html"
+                    <a href="Admissions/Applications"
                         class="menu-link" target="_blank">
                         <div data-i18n="Applications">Applications</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/pricing-page.html"
+                    <a href="Admissions/Apply Fresh"
                         class="menu-link" target="_blank">
                         <div data-i18n="Apply Fresh">Apply Fresh</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/payment-page.html"
+                    <a href="Admissions/Re-Registrations"
                         class="menu-link" target="_blank">
                         <div data-i18n="Re-Registrations">Re-Registrations</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/checkout-page.html"
+                    <a href="Admissions/Back Paper"
                         class="menu-link" target="_blank">
                         <div data-i18n="Back Paper">Back Paper</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/help-center-landing.html"
+                    <a href="Admissions/Results"
                         class="menu-link" target="_blank">
                         <div data-i18n="Results">Results</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/help-center-landing.html"
+                    <a href="Admissions/Exam Schedule"
                         class="menu-link" target="_blank">
                         <div data-i18n="Exam Schedule">Exam Schedule</div>
                     </a>
@@ -175,13 +172,13 @@
             <span class="menu-header-text" data-i18n="Apps & Pages">Apps &amp; Pages</span>
         </li> -->
         <li class="menu-item">
-            <a href="app-email.html" class="menu-link">
+            <a href="Settings" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-mail"></i>
                 <div data-i18n="Settings">Settings</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="app-chat.html" class="menu-link">
+            <a href="Notifications" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-messages"></i>
                 <div data-i18n="Notifications">Notifications</div>
             </a>
@@ -347,27 +344,27 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="app-academy-dashboard.html" class="menu-link">
+                    <a href="Accounts/Center Ledgers" class="menu-link">
                         <div data-i18n="Center Ledgers">Center Ledgers</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-academy-course.html" class="menu-link">
+                    <a href="Accounts/Offline Payments" class="menu-link">
                         <div data-i18n="Offline Payments">Offline Payments</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-academy-course-details.html" class="menu-link">
+                    <a href="Accounts/Online Payments" class="menu-link">
                         <div data-i18n="Online Payments">Online Payments </div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-academy-course-details.html" class="menu-link">
+                    <a href="Accounts/Students Ledgers" class="menu-link">
                         <div data-i18n="Students Ledgers">Students Ledgers</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-academy-course-details.html" class="menu-link">
+                    <a href="Accounts/Wallet Payments" class="menu-link">
                         <div data-i18n="Wallet Payments">Wallet Payments</div>
                     </a>
                 </li>
@@ -381,42 +378,42 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="app-logistics-dashboard.html" class="menu-link">
+                    <a href="Users/Board Managers" class="menu-link">
                         <div data-i18n="Board Managers">Board Managers</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-logistics-fleet.html" class="menu-link">
+                    <a href="Users/Operations" class="menu-link">
                         <div data-i18n="Operations">Operations</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-logistics-fleet.html" class="menu-link">
+                    <a href="Users/Counsellor" class="menu-link">
                         <div data-i18n="Counsellor">Counsellor</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-logistics-fleet.html" class="menu-link">
+                    <a href="Users/Sub-Counsellor" class="menu-link">
                         <div data-i18n="Sub-Counsellor">Sub-Counsellor</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-logistics-fleet.html" class="menu-link">
+                    <a href="Users/Center Masters" class="menu-link">
                         <div data-i18n="Center Masters">Center Masters</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-logistics-fleet.html" class="menu-link">
+                    <a href="Users/Centers" class="menu-link">
                         <div data-i18n="Centers">Centers</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-logistics-fleet.html" class="menu-link">
+                    <a href="Users/Sub-Centers" class="menu-link">
                         <div data-i18n="Sub-Centers">Sub-Centers</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-logistics-fleet.html" class="menu-link">
+                    <a href="Users/Accountants" class="menu-link">
                         <div data-i18n="Accountants">Accountants</div>
                     </a>
                 </li>
@@ -429,82 +426,82 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="app-invoice-list.html" class="menu-link">
+                    <a href="LMS-Settings/Subjects" class="menu-link">
                         <div data-i18n="Subjects">Subjects</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-preview.html" class="menu-link">
+                    <a href="LMS-Settings/Date Sheets" class="menu-link">
                         <div data-i18n="Date Sheets">Date Sheets</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-edit.html" class="menu-link">
+                    <a href="LMS-Settings/Assignments" class="menu-link">
                         <div data-i18n="Assignments">Assignments</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Assignments Review" class="menu-link">
                         <div data-i18n="Assignments Review">Assignments Review</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Practicals" class="menu-link">
                         <div data-i18n="Practicals">Practicals</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Mock Test" class="menu-link">
                         <div data-i18n="Mock Test">Mock Test</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Exam" class="menu-link">
                         <div data-i18n="Exam">Exam</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Results" class="menu-link">
                         <div data-i18n="Results">Results</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Queries & Feedback" class="menu-link">
                         <div data-i18n="Queries & Feedback">Queries & Feedback</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/E-Books" class="menu-link">
                         <div data-i18n="E-Books">E-Books</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Videos" class="menu-link">
                         <div data-i18n="Videos">Videos</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Question Banks" class="menu-link">
                         <div data-i18n="Question Banks">Question Banks</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Dispatch" class="menu-link">
                         <div data-i18n="Dispatch">Dispatch</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Documents" class="menu-link">
                         <div data-i18n="Documents">Documents</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Contact Us" class="menu-link">
                         <div data-i18n="Contact Us">Contact Us</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
+                    <a href="LMS-Settings/Download Center" class="menu-link">
                         <div data-i18n="Download Center">Download Center</div>
                     </a>
                 </li>
