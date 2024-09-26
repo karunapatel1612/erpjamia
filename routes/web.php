@@ -1,9 +1,11 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Academics\BoardsController;
 
 
 /*
@@ -25,16 +27,12 @@ Route::get('/', function () {
     return view('content.index');
 });
 
+Route::get('academics/boards', [BoardsController::class, 'index'])->name('academics.boards');
+Route::get('academics/board/add', [BoardsController::class, 'addBoards'])->name('academics.board.add');
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified',
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+
+Route::post('/academics/boards/store', [BoardsController::class, 'store'])->name('boards.store');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -47,7 +45,7 @@ Route::middleware([
 });
 
 
-Route::group(['middleware' => ['role:super-admin|admin']], function() {
+Route::group(['middleware' => ['role:super-admin|admin']], function () {
 
     Route::resource('permissions', PermissionController::class);
     Route::get('permissions/{permissionId}/delete', [PermissionController::class, 'destroy']);
@@ -59,11 +57,9 @@ Route::group(['middleware' => ['role:super-admin|admin']], function() {
 
     Route::resource('users', UserController::class);
     Route::get('users/{userId}/delete', [UserController::class, 'destroy']);
-
 });
 
-Route::group(['middleware' => ['auth']], function() {
+Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('roles', RoleController::class);
-
 });
