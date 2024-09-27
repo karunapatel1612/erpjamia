@@ -5,37 +5,22 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;  // Import the User model
 use Illuminate\Support\Facades\Hash; // Import the Hash facade
+use Spatie\Permission\Models\Role;
 
 class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
-    public function run()
+    public function run(): void
     {
-        $users = [
-            [
-                'name' => 'Admin',
-                'email' => 'admin1@gmail.com',
-                'password' => 'admin2',
-                'role' => 'admin',
-            ],
-            [
-                'name' => 'Center',
-                'email' => 'center@gmail.com',
-                'password' => 'admin3',
-                'role' => 'center',
-            ]
-        ];
-
-        foreach ($users as $user) {
-           $user = User::create([
-                'name' => $user['name'],
-                'email' => $user['email'],
-                'password' => Hash::make($user['password']),  // Hash the password
-            ]); 
-            $user->assignRole($user['role']);
-        }
-
+      $user = User::create([
+        'name' => 'Super Admin',
+        'email' => 'superadmin@example.com',
+        'password' => Hash::make('password')
+      ]);
+  
+      $role = Role::where('name', 'Super Admin')->first();
+      $user->assignRole([$role->id]);
     }
 }
