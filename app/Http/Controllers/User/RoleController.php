@@ -3,107 +3,125 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\User\RoleRequest;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class RoleController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('permission:view role', ['only' => ['index']]);
-        $this->middleware('permission:create role', ['only' => ['create','store','addPermissionToRole','givePermissionToRole']]);
-        $this->middleware('permission:update role', ['only' => ['update','edit']]);
-        $this->middleware('permission:delete role', ['only' => ['destroy']]);
+  public function index()
+  {
+    $user = Auth::user();
+    if (Auth::check() && Auth::user()->hasPermissionTo('view roles')) {
+      // $roles = Role::whereNotIn('name', ['Super Admin'])->orderBy('id', 'asc')->get();
+      $roles = Role::orderBy('id', 'asc')->get();
+      return view('user.role.index', compact('roles'));
+    } else {
+      return response()->view('errors.403', [], 403);
     }
+  }
 
-    public function index()
-    {
-        
-        $roles = Role::get();
-        return view('role-permission.role.index', ['roles' => $roles]);
+  public function create()
+  {
+    $user = Auth::user();
+    if (Auth::check() && Auth::user()->hasPermissionTo('create roles')) {
+      // $permissions = Permission::whereNotIn('name', ['view permissions', 'create permissions', 'edit permissions', 'delete permissions'])->orderBy('id', 'asc')->get();
+      $permissions = Permission::orderBy('id', 'asc')->get();
+      $permissionData = array();
+
+      foreach ($permissions as $permission) {
+        $permissionName = explode(" ", $permission->name);
+        $permissionData[$permissionName[1]][$permission->id] = ucwords($permissionName[0]);
+      }
+
+      return view('user.role.create', compact('permissionData'));
+    } else {
+      return response()->view('errors.403', [], 403);
     }
+  }
 
-    public function create()
-    {
-        return view('role-permission.role.create');
-    }
+  public function store(RoleRequest $request)
+  {
+    $user = Auth::user();
+    if (Auth::check() && Auth::user()->hasPermissionTo('create roles')) {
+      try {
+        $role = Role::create(['name' => $request->name]);
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => [
-                'required',
-                'string',
-                'unique:roles,name'
-            ]
+        $permissions = Permission::whereIn('id', $request->permissions)->get();
+        $role->syncPermissions($permissions);
+
+        return response()->json([
+          'status' => 'success',
+          'message' => $request->name . ' created successfully!',
         ]);
-
-        Role::create([
-            'name' => $request->name
+      } catch (\Exception $e) {
+        $message = strpos($e->getMessage(), 'Duplicate') !== false
+          ? $request->name . ' already exists'
+          : $e->getMessage();
+        return response()->json([
+          'status' => 'error',
+          'message' => $message,
         ]);
-
-        return redirect('roles')->with('status','Role Created Successfully');
+      }
+    } else {
+      return response()->view('errors.403', [], 403);
     }
+  }
 
-    public function edit(Role $role)
-    {
-        return view('role-permission.role.edit',[
-            'role' => $role
+  public function edit($id)
+  {
+    $user = Auth::user();
+    if (Auth::check() && Auth::user()->hasPermissionTo('edit roles')) {
+      // $permissions = Permission::whereNotIn('name', ['view permissions', 'create permissions', 'edit permissions', 'delete permissions'])->orderBy('id', 'asc')->get();
+      $permissions = Permission::orderBy('id', 'asc')->get();
+      $permissionData = array();
+
+      foreach ($permissions as $permission) {
+        $permissionName = explode(" ", $permission->name);
+        $permissionData[$permissionName[1]][$permission->id] = ucwords($permissionName[0]);
+      }
+
+      $role = Role::find($id);
+      $allotedPermissions = $role->permissions->pluck('id')->toArray();
+      return view('user.role.edit', compact(['role', 'allotedPermissions', 'permissionData']));
+    }else {
+      return response()->view('errors.403', [], 403);
+    }
+  }
+
+  public function update(RoleRequest $request)
+  {
+    $user = Auth::user();
+    if (Auth::check() && Auth::user()->hasPermissionTo('edit roles')) {
+      try {
+        $role = Role::find($request->id);
+        $role->name = $request->name;
+        $role->save();
+
+        $alreadyAssinedPermissions = $role->permissions;
+        foreach($alreadyAssinedPermissions as $alreadyAssinedPermission){
+          $role->revokePermissionTo($alreadyAssinedPermission);
+        }
+
+        $permissions = Permission::whereIn('id', $request->permissions)->get();
+        $role->syncPermissions($permissions);
+
+        return response()->json([
+         'status' =>'success',
+         'message' => $request->name .' updated successfully!',
         ]);
-    }
-
-    public function update(Request $request, Role $role)
-    {
-        $request->validate([
-            'name' => [
-                'required',
-                'string',
-                'unique:roles,name,'.$role->id
-            ]
+      } catch (\Exception $e) {
+        $message = strpos($e->getMessage(), 'Duplicate')!== false
+         ? $request->name .' already exists'
+          : $e->getMessage();
+        return response()->json([
+         'status' => 'error',
+         'message' => $message,
         ]);
-
-        $role->update([
-            'name' => $request->name
-        ]);
-
-        return redirect('roles')->with('status','Role Updated Successfully');
+      }
+    }else {
+      return response()->view('errors.403', [], 403);
     }
-
-    public function destroy($roleId)
-    {
-        $role = Role::find($roleId);
-        $role->delete();
-        return redirect('roles')->with('status','Role Deleted Successfully');
-    }
-
-    public function addPermissionToRole($roleId)
-    {
-        $permissions = Permission::get();
-        $role = Role::findOrFail($roleId);
-        $rolePermissions = DB::table('role_has_permissions')
-                                ->where('role_has_permissions.role_id', $role->id)
-                                ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
-                                ->all();
-
-        return view('role-permission.role.add-permissions', [
-            'role' => $role,
-            'permissions' => $permissions,
-            'rolePermissions' => $rolePermissions
-        ]);
-    }
-
-    public function givePermissionToRole(Request $request, $roleId)
-    {
-        $request->validate([
-            'permission' => 'required'
-        ]);
-
-        $role = Role::findOrFail($roleId);
-        $role->syncPermissions($request->permission);
-
-        return redirect()->back()->with('status','Permissions added to role');
-    }
+  }
 }

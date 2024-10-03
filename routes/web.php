@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Academics\BoardsController;
 use App\Http\Controllers\User\PermissionController;
@@ -26,16 +27,12 @@ Route::get('/', function () {
     return view('content.index');
 });
 
+Route::get('academics/boards', [BoardsController::class, 'index'])->name('academics.boards');
+Route::get('academics/board/add', [BoardsController::class, 'addBoards'])->name('academics.board.add');
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified',
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+
+Route::post('/academics/boards/store', [BoardsController::class, 'store'])->name('boards.store');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -48,18 +45,18 @@ Route::middleware([
 });
 
 
-Route::group(['middleware' => ['role:super-admin|admin']], function() {
+Route::group(['middleware' => ['auth']], function () {
+  // Roles & Permissions
+  Route::get('/users/permissions', [PermissionController::class, 'index'])->name('users.permissions');
+  Route::get('/users/permissions/create', [PermissionController::class, 'create'])->name('users.permissions.create');
+  Route::post('/users/permissions', [PermissionController::class, 'store'])->name('users.permissions');
 
-    Route::resource('permissions', PermissionController::class);
-    Route::get('permissions/{permissionId}/delete', [PermissionController::class, 'destroy']);
-
-    Route::resource('roles', RoleController::class);
-    Route::get('roles/{roleId}/delete', [RoleController::class, 'destroy']);
-    Route::get('roles/{roleId}/give-permissions', [RoleController::class, 'addPermissionToRole']);
-    Route::put('roles/{roleId}/give-permissions', [RoleController::class, 'givePermissionToRole']);
-
-    Route::resource('users', UserController::class);
-    Route::get('users/{userId}/delete', [UserController::class, 'destroy']);
+  // Roles
+  Route::get('/users/roles', [RoleController::class, 'index'])->name('users.roles');
+  Route::get('/users/roles/create', [RoleController::class, 'create'])->name('users.roles.create');
+  Route::post('/users/roles', [RoleController::class, 'store'])->name('users.roles');
+  Route::get('/users/roles/edit/{id}', [RoleController::class, 'edit'])->name('users.roles.edit');
+  Route::post('/users/roles/update', [RoleController::class, 'update'])->name('users.roles.update');
 
   // Users
   Route::get('/users', [UserController::class, 'index'])->name('users');
@@ -89,8 +86,3 @@ Route::delete('setting/admission_types/destroy/{id}', [AdmissionTypeController::
 
 });
 
-Route::group(['middleware' => ['auth']], function() {
-
-    Route::resource('roles', RoleController::class);
-
-});
