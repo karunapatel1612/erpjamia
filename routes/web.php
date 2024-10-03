@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PermissionController;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\Academics\BoardsController;
+use App\Http\Controllers\User\PermissionController;
+use App\Http\Controllers\User\RoleController;
+use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Setting\AdmissionTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,32 @@ Route::group(['middleware' => ['role:super-admin|admin']], function() {
 
     Route::resource('users', UserController::class);
     Route::get('users/{userId}/delete', [UserController::class, 'destroy']);
+
+  // Users
+  Route::get('/users', [UserController::class, 'index'])->name('users');
+  Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
+  Route::post('/users', [UserController::class, 'store'])->name('users');
+ 
+  // Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('users.edit');
+  // Route::post('/users/update', [UserController::class, 'update'])->name('users.update');
+  // Route::get('/users/delete/{id}', [UserController::class, 'destroy'])->name('users.delete');
+
+// Setting Route
+  Route::get('/setting/admission_types', [AdmissionTypeController::class, 'index'])->name('setting.admission_types');
+  Route::get('/setting/admission_types/create', [AdmissionTypeController::class, 'create'])->name('setting.admission_types.create');
+  Route::post('/setting/admission_types/store', [AdmissionTypeController::class, 'store'])->name('setting.admission_types.store');
+//   Route::get('/setting/admission_types/edit/{id}', [AdmissionTypeController::class, 'edit'])->name('setting.admission_types.edit');
+Route::get('setting/admission_types/edit/{id}', [AdmissionTypeController::class, 'edit'])->name('setting.admission_types.edit');
+Route::post('setting/admission_types/update/{id}', [AdmissionTypeController::class, 'update'])->name('setting.admission_types.update');
+Route::get('setting/admission_types/status/{id}', [AdmissionTypeController::class, 'status'])->name('setting.admission_types.status');
+
+Route::delete('setting/admission_types/destroy/{id}', [AdmissionTypeController::class, 'destroy'])->name('setting.admission_types.destroy');
+
+
+
+
+
+
 
 });
 

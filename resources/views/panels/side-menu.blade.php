@@ -168,10 +168,63 @@
             <span class="menu-header-text" data-i18n="Apps & Pages">Apps &amp; Pages</span>
         </li>
         <li class="menu-item">
-            <a href="app-email.html" class="menu-link">
+            <a href="Settings" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-mail"></i>
                 <div data-i18n="Email">Email</div>
             </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="{{route('setting.admission_types')}}"
+                        class="menu-link">
+                        <div data-i18n="Admission Types">Admission Types</div>
+                    </a>
+                </li>
+
+                
+
+                <li class="menu-item">
+                    <a href=""
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Modes">Modes</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href=""
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Schemes">Schemes</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href=""
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Admission Session">Admission Session</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href=""
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Exam Session">Exam Session</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="Admissions/Exam Schedule"
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Program Type">Program Type</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="Admissions/Exam Schedule"
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Fee Structure">Fee Structure</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="Admissions/Exam Schedule"
+                        class="menu-link" target="_blank">
+                        <div data-i18n="Page Access">Page Access</div>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="menu-item">
             <a href="app-chat.html" class="menu-link">
